@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal-website</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,9 +28,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
 
     <!-- JS scripts -->
-    <script src="./scripts/cursor.js" defer></script>
-    <script src="./scripts/preloader.js" defer></script>
-    <script src="./scripts/sidebar.js" defer></script>
+    <script src="/scripts/cursor.js" defer></script>
+    <script src="/scripts/preloader.js" defer></script>
+    <script src="/scripts/transition.js" defer></script>
+    <script src="/scripts/sidebar.js" defer></script>
 
 </head>
 
@@ -53,6 +54,23 @@
         <div class="bar"></div>
     </div>
 
+    <div class="transition">
+        <div class="transition-row row-1">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="transition-row row-2">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    </div>
+
     <header>
         <nav>
             <ul class="sidebar">
@@ -65,17 +83,15 @@
                         </svg>
                     </button>
                 </li>
-                <li class="sidebar-content"><a class="btn sidebar-links" style="--clr: #414040" href="">projecten</a>
+                <li class="sidebar-content"><a class="btn sidebar-links" style="--clr: #414040" href="">Statistieken</a>
                 </li>
-                <li class="sidebar-content"><a class="btn sidebar-links" style="--clr: #414040" href="">over</a></li>
-                <li class="sidebar-content"><a class="btn border-btn glow-btn sidebar-links" style="--clr: #414040"
-                        href="">contact</a></li>
+                <li class="sidebar-content"><a class="btn border-btn sidebar-links" style="--clr: #414040"
+                        href="#">over</a></li>
             </ul>
             <ul>
-                <li><a id="logo" href="index.html">Tickrate</a></li>
-                <li><a class="hideOnMobile btn" style="--clr: #414040" href="#">projecten</a></li>
-                <li><a class="hideOnMobile btn" style="--clr: #414040" href="#">over</a></li>
-                <li><a class="hideOnMobile btn border-btn glow-btn" style="--clr: #414040" href="#">contact</a></li>
+                <li><a id="logo" href="/index.html">Tickrate</a></li>
+                <li><a class="hideOnMobile btn" style="--clr: #414040" href="#">Statistieken</a></li>
+                <li><a class="hideOnMobile btn border-btn" style="--clr: #414040" href="#">Over</a></li>
                 <li>
                     <button class="btn menu-btn" style="--clr: #414040" onclick="showSideBar()">
                         <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"

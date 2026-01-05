@@ -89,6 +89,39 @@
     pointer-events: none;
 }
 
+/*transition*/
+.transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    pointer-events: none;
+
+    .transition-row {
+        flex: 1;
+        display: flex;
+    }
+
+    .transition-row.row-1 .block {
+        transform-origin: top;
+    }
+
+    .transition-row.row-2 .block {
+        transform-origin: bottom;
+    }
+
+    .block {
+        flex: 1;
+        background-color: var(--black);
+        transform: scaleY(1);
+        will-change: transform;
+    }
+}
+
 html,
 body {
     height: 100%;
