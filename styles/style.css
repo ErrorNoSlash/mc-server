@@ -74,7 +74,7 @@
     .bar {
         width: 10vw;
         height: 105vh;
-        background: var(--grey);
+        background: var(--black);
     }
 }
 
@@ -83,7 +83,7 @@
     bottom: -0.85em;
     right: 0.05em;
     z-index: 5;
-    color: var(--black);
+    color: var(--grey);
     font-size: 20vw;
     font-family: 'Questrial';
     pointer-events: none;
@@ -211,27 +211,6 @@ nav {
     }
 }
 
-/* blackhole at top of site */
-.blackhole-box {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: auto;
-    transform: translateX(-50%);
-    pointer-events: none;
-    z-index: 0;
-    mix-blend-mode: lighten;
-
-    video {
-        width: 115rem;
-        height: auto;
-        max-width: none;
-        min-width: 0;
-        margin-top: -27rem;
-        transform: none;
-    }
-}
-
 /* main section */
 main {
     display: flex;
@@ -241,129 +220,6 @@ main {
     align-items: center;
     justify-content: center;
     gap: 6rem;
-}
-
-/* hero section */
-.hero {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: auto;
-    align-items: center;
-    flex-grow: 1;
-    gap: 5rem;
-    height: calc(100vh - 93.7px);
-
-    .hero-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 2rem;
-        margin-left: 1rem;
-        border-left: var(--border) solid 0.25rem;
-        border-radius: 0.5rem;
-        gap: 1rem;
-        height: 65%;
-
-        h1 {
-            font-size: 5rem;
-            margin: 0;
-            padding: 0;
-            color: var(--grey);
-        }
-
-        p {
-            margin: 0;
-            font-size: 2rem;
-            max-width: 37.5rem;
-            color: var(--grey);
-        }
-
-        .gradient {
-            background: linear-gradient(to right, #c7ced2, #AEB5B8, #525252, #AEB5B8, #c7ced2);
-            background-size: 200%;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: animate-gradient 2.5s linear infinite;
-        }
-
-        #hero-badge {
-            background-color: hsla(0, 0%, 100%, 0.165);
-            border: var(--grey) solid 0.15rem;
-            border-radius: 1rem;
-            text-align: center;
-            width: 21rem;
-            font-size: 2rem;
-            padding: 0.5rem 1rem;
-            margin: 0;
-            margin-bottom: 1rem;
-        }
-    }
-
-    #hero-image {
-        height: 75%;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-@keyframes animate-gradient {
-    to {
-        background-position: 200%;
-    }
-}
-
-.scroll-down {
-    height: 50px;
-    width: 30px;
-    border: 2px solid lightgray;
-    position: absolute;
-    left: 50%;
-    bottom: 4%;
-    transform: translateX(-50%);
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.626);
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        height: 10px;
-        width: 10px;
-        transform: translate(-50%, -100%) rotate(45deg);
-        border: 2px solid lightgray;
-        border-top: transparent;
-        border-left: transparent;
-        animation: scroll-down 2s ease-in-out infinite;
-    }
-
-    &::before {
-        top: 30%;
-        animation-delay: 0.5s;
-    }
-}
-
-@keyframes scroll-down {
-    0% {
-        opacity: 0;
-    }
-
-    30% {
-        opacity: 1;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    100% {
-        top: 90%;
-        opacity: 0;
-    }
 }
 
 /* footer */
@@ -461,55 +317,6 @@ footer {
             height: 100%;
             object-fit: cover;
             margin-top: -14.8rem;
-        }
-    }
-
-    .hero {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-
-        min-height: calc(100svh - 80px);
-        height: auto;
-
-        gap: clamp(1rem, 4svh, 2rem);
-
-        .hero-info {
-            margin: auto 0;
-            display: flex;
-            flex-direction: column;
-
-            h1 {
-                font-size: clamp(2.4rem,
-                        6vmax,
-                        4.4rem);
-                line-height: 1.1;
-                margin: 0;
-            }
-
-            p {
-                font-size: clamp(1.15rem,
-                        2.8vw + 2svh,
-                        2.1rem);
-                margin: 0;
-            }
-
-            #hero-badge {
-                width: fit-content;
-                max-width: 100%;
-
-                font-size: clamp(0.8rem,
-                        2vw + 1.5svh,
-                        1.5rem);
-                line-height: 1;
-
-                padding:
-                    clamp(0.45rem, 1.3svh, 0.65rem) clamp(0.75rem, 3vw, 1rem);
-
-                margin-bottom: clamp(0.6rem, 2svh, 1.1rem);
-
-                white-space: nowrap;
-            }
         }
     }
 }
