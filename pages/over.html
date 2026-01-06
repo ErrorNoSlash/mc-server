@@ -7,6 +7,7 @@
     <title>Personal-website</title>
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/about.css">
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,14 +84,16 @@
                         </svg>
                     </button>
                 </li>
-                <li class="sidebar-content"><a class="btn sidebar-links" style="--clr: #414040" href="">Statistieken</a>
+                <li class="sidebar-content"><a class="btn sidebar-links" style="--clr: #414040"
+                        href="/pages/statistics.html">Statistieken</a>
                 </li>
                 <li class="sidebar-content"><a class="btn border-btn sidebar-links" style="--clr: #414040"
                         href="#">over</a></li>
             </ul>
             <ul>
                 <li><a id="logo" href="/index.html">Tickrate</a></li>
-                <li><a class="hideOnMobile btn" style="--clr: #414040" href="#">Statistieken</a></li>
+                <li><a class="hideOnMobile btn" style="--clr: #414040" href="/pages/statistics.html">Statistieken</a>
+                </li>
                 <li><a class="hideOnMobile btn border-btn" style="--clr: #414040" href="#">Over</a></li>
                 <li>
                     <button class="btn menu-btn" style="--clr: #414040" onclick="showSideBar()">
@@ -104,6 +107,26 @@
         </nav>
     </header>
     <main>
+        <section id="about">
+            <div class="title-box">
+                <p id="title" style="font-size: larger;">Tickrate</p>
+                <p>Paper like mc server panel</p>
+            </div>
+            <div class="info">
+                <h1>Why i made this</h1>
+                <p>This server panel was built as a personal project to explore and learn about JavaScript polling and
+                    working with APIs. Through this project, I gained hands-on experience in real-time data retrieval
+                    and asynchronous communication.</p>
+            </div>
+        </section>
+        <section class="sources">
+            <h1>Sources</h1>
+            <div class="links">
+                <a style="--clr: #414040; text-decoration: none;" class="btn"
+                    href="https://github.com/ErrorNoSlash/mc-server">Github</a>
+                <a style="--clr: #414040; text-decoration: none;" class="btn" href="https://api.mcsrvstat.us/">API</a>
+            </div>
+        </section>
     </main>
     <footer>
 
@@ -126,7 +149,6 @@
         <div id="rotate-box">
             <div class="rotate-content">
                 <span class="rotate-icon">📱</span>
-                <p>Please rotate device</p>
 
                 <div class="rotate-socials">
                     <div class="rotate-links">

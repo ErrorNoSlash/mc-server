@@ -25,7 +25,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    z-index: 2;
 
     /*---BORDER-BTN---*/
     &.border-btn {
@@ -339,19 +338,6 @@ footer {
             display: block;
         }
     }
-
-    .blackhole-box {
-        position: absolute;
-        width: 100vw;
-        height: 40rem;
-
-        video {
-            width: 100vw;
-            height: 100%;
-            object-fit: cover;
-            margin-top: -14.8rem;
-        }
-    }
 }
 
 /* Mobile */
@@ -404,7 +390,7 @@ footer {
 
 #rotate-box {
     z-index: 1;
-    border-radius: 5%;
+    border-radius: 4%;
     position: relative;
     background: var(--border);
     overflow: hidden;
@@ -415,7 +401,7 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotate(45deg);
-        height: 37rem;
+        height: 45rem;
         width: 4rem;
         background: whitesmoke;
         box-shadow: 0 0 1rem whitesmoke,
@@ -427,6 +413,7 @@ footer {
 }
 
 .rotate-content {
+    padding: 0;
     margin: 0.5rem;
     text-align: center;
     background: var(--grey);
@@ -437,7 +424,7 @@ footer {
 
     /* padding shrinks faster on small heights */
     padding: clamp(1rem, 8vh, 2.5rem);
-    border-radius: 5%;
+    border-radius: 3%;
     max-width: min(90vw, 36rem);
 
     p {
