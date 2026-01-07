@@ -246,13 +246,12 @@ nav {
 /* main section */
 main {
     display: flex;
-    flex-grow: 1;
-    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 6rem;
     margin-bottom: 1rem;
+
+    flex: 1;
 }
 
 /* footer */
@@ -516,8 +515,19 @@ footer {
     }
 }
 
-
+/* activate overlay on 535px height */
 @media (max-height: 535px) {
+    .rotate-overlay {
+        display: flex;
+    }
+
+    body {
+        overflow: hidden;
+    }
+}
+
+/* activate overlay on 450px width */
+@media (max-width: 450px) {
     .rotate-overlay {
         display: flex;
     }
