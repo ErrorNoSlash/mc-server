@@ -43,8 +43,8 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         margin: 5rem 0rem;
+        width: 85%;
         max-width: 70rem;
-        width: 100%;
 
         .status-card {
             border: 0.063rem solid var(--border);
@@ -84,8 +84,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
+        width: 85%;
         max-width: 70rem;
-        width: 100%;
 
         .feature {
             border-left: 0.25rem solid var(--black);
