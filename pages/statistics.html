@@ -110,27 +110,53 @@
     <main>
         <section id="about">
             <div class="title-box">
-                <p id="title" style="font-size: larger;">Statistieken</p>
-                <p>Paper like mc server panel</p>
-            </div>
-            <div class="info">
-                <h1>Why i made this</h1>
-                <p>This server panel was built as a personal project to explore and learn about JavaScript polling and
-                    working with APIs. Through this project, I gained hands-on experience in real-time data retrieval
-                    and asynchronous communication.</p>
+                <p id="title">Minecraft Server</p>
+                <p>This table shows the numbers of players online on mc-central</p>
             </div>
         </section>
-        <section class="sources">
-            <h1>Sources</h1>
-            <div class="links">
-                <a style="--clr: #414040; text-decoration: none;" class="btn"
-                    href="https://github.com/ErrorNoSlash/mc-server">Github</a>
-                <a style="--clr: #414040; text-decoration: none;" class="btn" href="https://api.mcsrvstat.us/">API</a>
+        <div class="options-box">
+            <div class="options">
+                <h1>limiet lijnen naar</h1>
+                <form style="gap: 1rem; display: flex;">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="2">
+                        <label for="2">2</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="5">
+                        <label for="5">5</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="20">
+                        <label for="20">20 (default)</label>
+                    </div>
+                </form>
             </div>
-        </section>
+
+            <div class="options">
+                <h1>Sorteer data op</h1>
+                <p>Wanneer zowel tijd als aantal spelers worden geselecteerd: gegevens worden eerst geordend op
+                    aantal spelers dan
+                    datum</p>
+
+            </div>
+            <form style="gap: 1rem; display: flex;">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="to">
+                    <label for="to">tijd (oud)</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="tn">
+                    <label for="tn">tijd (nieuw)</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="nos">
+                    <label for="nos">nr spelers (hoogst 1st)</label>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
-
         <section id="footer-text">
             Connect with me on social
         </section>

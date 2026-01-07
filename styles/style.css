@@ -152,6 +152,18 @@ body {
     border: 0.1rem solid hsl(0, 0%, 0%);
 }
 
+/* cursor animation */
+.cursor-outline {
+    opacity: 1;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+body:has(main input[type="checkbox"]:hover) .cursor-outline {
+    opacity: 0;
+}
+
+
+
 /* Main body */
 body {
     background-color: var(--grey);
