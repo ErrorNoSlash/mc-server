@@ -230,7 +230,7 @@ nav {
         position: fixed;
         top: 0;
         right: 0;
-        height: 100vh;
+        height: 100%;
         width: 16rem;
         display: none;
         flex-direction: column;
@@ -250,8 +250,8 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-
     flex: 1;
+    gap: 2rem;
 }
 
 /* footer */
@@ -471,7 +471,8 @@ footer {
 }
 
 /* Ultra-small screens: height ≤ 195px -> only text + rotate-links */
-@media (max-height: 195px) {
+@media (max-height: 195px),
+(max-width: 365px) {
     .rotate-overlay {
         display: flex;
         align-items: center;
