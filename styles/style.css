@@ -250,7 +250,7 @@ main {
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    gap: 2rem;
+
     flex: 1;
 }
 
@@ -526,14 +526,13 @@ footer {
     }
 }
 
-/* activate overlay on 450px width */
-@media (max-width: 450px) {
-    .rotate-overlay {
-        display: flex;
-    }
-
-    body {
-        overflow: hidden;
+@media (max-width: 380px) {
+    footer {
+        #footer-links {
+            display: flex;
+            flex-direction: column;
+            border-radius: 1rem;
+        }
     }
 }
 

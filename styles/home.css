@@ -115,7 +115,6 @@
 
     .home {
         min-height: auto;
-        width: 100%;
         padding: 2rem 1.25rem;
         display: flex;
         flex-direction: column;
@@ -144,10 +143,5 @@
             flex-direction: column;
             gap: 1.25rem;
         }
-    }
-
-    footer {
-        flex-shrink: 0;
-        width: 100%;
     }
 }
