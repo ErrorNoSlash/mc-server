@@ -120,11 +120,18 @@ main {
     }
 
     .stats-box {
-        width: 55%;
+        width: 38%;
         background: grey;
         border: var(--border) solid 0.3rem;
-        border-radius: 0.75rem;
-        padding: 0.65rem;
+        border-radius: 0.4rem;
+    }
+}
+
+@media (max-width: 64rem) {
+    main {
+        .stats-box {
+            width: auto;
+        }
     }
 }
 
