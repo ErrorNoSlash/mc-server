@@ -7,12 +7,13 @@
 
 main {
     width: 100%;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: calc(100vh - var(--header-height));
+    min-height: auto;
 
     #about {
         margin: 0rem 1rem;
@@ -117,4 +118,32 @@ main {
             font-size: 1.2rem;
         }
     }
+
+    .stats-box {
+        width: 55%;
+        background: grey;
+        border: var(--border) solid 0.3rem;
+        border-radius: 0.75rem;
+        padding: 0.65rem;
+    }
+}
+
+/* JS table */
+.stats-box .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: inherit;
+}
+
+.stats-box th,
+.stats-box td {
+    border: 0.2rem solid var(--border);
+    background: var(--grey);
+    padding: 0.4rem 0.6rem;
+    text-align: center;
+}
+
+.stats-box th {
+    background-color: var(--grey);
+    font-weight: bold;
 }
