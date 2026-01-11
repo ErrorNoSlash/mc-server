@@ -1,10 +1,109 @@
-main {
+.home {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - var(--header-height));
+
+    .hero {
+        text-align: center;
+        max-width: 60rem;
+        width: 100%;
+
+        .hero-title {
+            font-family: "Rouge Script", cursive;
+            font-size: clamp(4rem, 10vw, 7rem);
+            margin: 0;
+            line-height: 1.1;
+            word-wrap: break-word;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            margin: 1.5rem 0 3rem;
+            opacity: 0.85;
+            word-wrap: break-word;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .status {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin: 5rem 0rem;
+        width: 90%;
+        max-width: 70rem;
+
+        .status-card {
+            border: 0.063rem solid var(--border);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(0.4rem);
+            box-sizing: border-box;
+
+            h3 {
+                margin: 0 0 0.5rem;
+                font-size: 1.2rem;
+            }
+
+            p {
+                margin: 0;
+                font-size: 1.4rem;
+
+                strong {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 0.75rem;
+            height: 0.75rem;
+            background: #2ecc71;
+            border-radius: 50%;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 0 0.75rem #2ecc71;
+        }
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 90%;
+        max-width: 70rem;
+
+        .feature {
+            border-left: 0.25rem solid var(--black);
+            padding-left: 1.5rem;
+            box-sizing: border-box;
+
+            h3 {
+                margin: 0 0 0.5rem;
+                font-size: 1.4rem;
+            }
+
+            p {
+                margin: 0;
+                opacity: 0.85;
+                word-wrap: break-word;
+            }
+        }
+    }
 }
 
 @media (max-width: 64rem) {
@@ -14,7 +113,7 @@ main {
         min-height: 100vh;
     }
 
-    main {
+    .home {
         min-height: auto;
         padding: 2rem 1.25rem;
         display: flex;
@@ -23,5 +122,26 @@ main {
         align-items: center;
         box-sizing: border-box;
         overflow: visible;
+
+        .hero,
+        .status,
+        .features {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+        }
+
+        .status {
+            margin: 1rem 0rem;
+        }
+
+        .status,
+        .features {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
     }
 }
